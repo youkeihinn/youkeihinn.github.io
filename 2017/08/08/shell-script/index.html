@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://youkeihinn.github.io">
-  <title>Archives: 2017 | 忧桑的小屋</title>
+  <title>shell | 忧桑的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="忧桑的小屋">
-<meta property="og:url" content="https://youkeihinn.github.io/archives/2017/index.html">
+  <meta name="description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell">
+<meta property="og:url" content="https://youkeihinn.github.io/2017/08/08/shell-script/index.html">
 <meta property="og:site_name" content="忧桑的小屋">
+<meta property="og:description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;a">
 <meta property="og:locale" content="zh-CH">
+<meta property="og:updated_time" content="2017-08-08T03:34:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="忧桑的小屋">
+<meta name="twitter:title" content="shell">
+<meta name="twitter:description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;a">
   
     <link rel="alternative" href="/atom.xml" title="忧桑的小屋" type="application/atom+xml">
   
@@ -150,76 +154,161 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-shell-script" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      shell
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/08/shell-script/" class="archive-article-date">
+
+        
+        <a href="/2017/08/08/shell-script/" class="archive-article-date">
   	<time datetime="2017-08-08T03:21:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/08/shell-script/">shell</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>写几个面试题的shell脚本</p>
+<h3 id="问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030-这些机器"><a href="#问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030-这些机器" class="headerlink" title="问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器"></a>问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器</h3><h3 id="这些机器有共同的key-root-a-key"><a href="#这些机器有共同的key-root-a-key" class="headerlink" title="这些机器有共同的key/root/a.key"></a>这些机器有共同的key/root/a.key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ <span class="comment">#!/bin/bash</span></div><div class="line">$ key=/root/a.key</div><div class="line">$ s=<span class="string">"001 002 003~030"</span></div><div class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> <span class="variable">$s</span></div><div class="line">$ <span class="keyword">do</span></div><div class="line">$ ssh -i <span class="variable">$key</span> root@<span class="variable">$i</span> <span class="string">"date &amp;&amp; cat /etc/issue"</span></div><div class="line">$ <span class="keyword">done</span></div></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://youkeihinn.github.io/2017/08/08/shell-script/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/31/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-31T04:59:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello,World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/31/hello-world/">Hello,World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -242,8 +331,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
