@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://youkeihinn.github.io">
   <title>shell | 忧桑的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;a">
+  <meta name="description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030,这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;amp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="shell">
 <meta property="og:url" content="https://youkeihinn.github.io/2017/08/08/shell-script/index.html">
 <meta property="og:site_name" content="忧桑的小屋">
-<meta property="og:description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;a">
+<meta property="og:description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030,这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;amp">
 <meta property="og:locale" content="zh-CH">
-<meta property="og:updated_time" content="2017-08-08T03:34:16.000Z">
+<meta property="og:updated_time" content="2017-08-08T03:48:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell">
-<meta name="twitter:description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;a">
+<meta name="twitter:description" content="写几个面试题的shell脚本 问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030,这些机器有共同的key/root/a.key1234567$ #!/bin/bash$ key=/root/a.key$ s=&quot;001 002 003~030&quot;$ for i in $s$ do$ ssh -i $key root@$i &quot;date &amp;amp;&amp;amp">
   
     <link rel="alternative" href="/atom.xml" title="忧桑的小屋" type="application/atom+xml">
   
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>写几个面试题的shell脚本</p>
-<h3 id="问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030-这些机器"><a href="#问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030-这些机器" class="headerlink" title="问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器"></a>问题1：请用shell实现不登录查看30台主机的（系统时间）和系统版本，计算机命为001-030,这些机器</h3><h3 id="这些机器有共同的key-root-a-key"><a href="#这些机器有共同的key-root-a-key" class="headerlink" title="这些机器有共同的key/root/a.key"></a>这些机器有共同的key/root/a.key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ <span class="comment">#!/bin/bash</span></div><div class="line">$ key=/root/a.key</div><div class="line">$ s=<span class="string">"001 002 003~030"</span></div><div class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> <span class="variable">$s</span></div><div class="line">$ <span class="keyword">do</span></div><div class="line">$ ssh -i <span class="variable">$key</span> root@<span class="variable">$i</span> <span class="string">"date &amp;&amp; cat /etc/issue"</span></div><div class="line">$ <span class="keyword">done</span></div></pre></td></tr></table></figure>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h3 id="问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030-这些机器有共同的key-root-a-key"><a href="#问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030-这些机器有共同的key-root-a-key" class="headerlink" title="问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030,这些机器有共同的key/root/a.key"></a>问题1：请用shell实现不登录查看30台主机的（系统时间）和（系统版本），计算机名为001-030,这些机器有共同的key/root/a.key</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ <span class="comment">#!/bin/bash</span></div><div class="line">$ key=/root/a.key</div><div class="line">$ s=<span class="string">"001 002 003~030"</span></div><div class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> <span class="variable">$s</span></div><div class="line">$ <span class="keyword">do</span></div><div class="line">$ ssh -i <span class="variable">$key</span> root@<span class="variable">$i</span> <span class="string">"date &amp;&amp; cat /etc/issue"</span></div><div class="line">$ <span class="keyword">done</span></div></pre></td></tr></table></figure>
+<h3 id="问题2：请用shell实现打印出名为num-file文件第三列为AA且第六列为CC的行，文件内容如下："><a href="#问题2：请用shell实现打印出名为num-file文件第三列为AA且第六列为CC的行，文件内容如下：" class="headerlink" title="问题2：请用shell实现打印出名为num.file文件第三列为AA且第六列为CC的行，文件内容如下："></a>问题2：请用shell实现打印出名为num.file文件第三列为AA且第六列为CC的行，文件内容如下：</h3><p>$ AA AB AC AD AE AF AG<br>$ a1 a2 AA a4 a5 CC a7<br>$ b1 b2 b3 b4 b5 b6 b7<br>$ c1 c2 c3 c4 c5 CC c7<br>$ d1 d2 d3 d4 d5 d6 d7</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
